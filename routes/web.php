@@ -14,12 +14,5 @@ use App\Http\Controllers\ProductsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/product', [ProductsController::class, 'index'])->name('product.index');
-Route::get('/product/create', [ProductsController::class, 'create'])->name('product.create');
-Route::post('/product/create', [ProductsController::class, 'store'])->name('product.store');
-Route::get('/product/edit/{product}', [ProductsController::class, 'edit'])->name('product.edit');
-Route::put('/product/edit/{product}', [ProductsController::class, 'update'])->name('product.update');
+Route::get('/', [ProductsController::class, 'index'])->name('product.index');
+Route::get('/product/{product}', [ProductsController::class, 'show'])->name('product.show');
