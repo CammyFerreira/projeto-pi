@@ -21,3 +21,27 @@
 #btnSeeMore{
     background-color: #126E82;
 }
+#btnBuy{
+    background-color: #126E82;
+    color: #ffffff;
+}
+#btn-minus{
+    background-color: #126E82;
+    color: #ffffff;
+}
+#btn-plus{
+    background-color: #126E82;
+    color: #ffffff;
+}
+#card{
+    border: 1px solid #126E82;
+}
+.carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:90%;
+    margin: auto;
+    border-radius: 1cm;
+    height: 600px;
+}

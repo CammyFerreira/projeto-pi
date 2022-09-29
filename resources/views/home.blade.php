@@ -2,6 +2,7 @@
     @section('main')
 
     <!-- Start Banner Hero -->
+    <div class="carousel">
     <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
             <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
@@ -13,7 +14,7 @@
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="/img/banner1.jpg" alt="">
+                            <img class="img-fluid" src="/img/banner2.jpg" alt="">
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
@@ -73,6 +74,7 @@
             <i class="fas fa-chevron-right"></i>
         </a>
     </div>
+</div>
     <!-- End Banner Hero -->
 
 
@@ -265,5 +267,8 @@
     </section>
     <!-- End Featured Product -->
 
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/templatemo.js"></script>
+    
 @endsection
 
