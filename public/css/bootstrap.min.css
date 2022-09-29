@@ -6617,12 +6617,12 @@ fieldset:disabled .btn {
     margin-left: 3px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: red;
     background-clip: padding-box;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     opacity: .5;
-    transition: opacity .6s ease
+    transition: opacity .6s linear;
 }
 
 @media (prefers-reduced-motion:reduce) {
