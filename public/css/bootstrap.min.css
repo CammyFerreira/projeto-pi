@@ -1240,7 +1240,9 @@ progress {
 
     .col-md-12 {
         flex: 0 0 auto;
-        width: 100%
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .offset-md-0 {
@@ -4732,8 +4734,8 @@ fieldset:disabled .btn {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: .25rem
+    border-radius: .25rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1)
 }
 
 .card>hr {
@@ -4765,7 +4767,7 @@ fieldset:disabled .btn {
 
 .card-body {
     flex: 1 1 auto;
-    padding: 1rem 1rem
+    padding: 1rem 1rem;
 }
 
 .card-title {
@@ -4831,6 +4833,18 @@ fieldset:disabled .btn {
     padding: 1rem;
     border-radius: calc(.25rem - 1px)
 }
+
+.card-img{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.card-img img{
+    border-radius: 30px !important;
+
+
+}
+
 
 .card-img,
 .card-img-bottom,
@@ -11559,6 +11573,15 @@ fieldset:disabled .btn {
     .d-print-none {
         display: none !important
     }
+}
+
+
+.card a img {
+    border-radius: 20px;
+}
+
+.card-radius {
+    border-radius: 20px !important;
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */

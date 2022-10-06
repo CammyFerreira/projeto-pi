@@ -102,7 +102,7 @@
                                    <h5>Shows</h5>
                                    <h4 class="pt-1 pb-2">Saiba mais</h4>
 
-                                   <button id="bt1" type= "button" class="btn btn-outline-danger btn-block btn-sm">Comprar</button>
+
                                 </div>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                                    <h5>Teatro</h5>
                                    <h4 class="pt-1 pb-2">Saiba mais</h4>
 
-                                   <button type= "button" class="btn btn-outline-danger btn-block btn-sm">Comprar</button>
+
                                 </div>
                             </div>
                         </div>
@@ -124,7 +124,7 @@
                                    <h5>Stand-up</h5>
                                    <h4 class="pt-1 pb-2">Saiba mais</h4>
 
-                                   <button type= "button" class="btn btn-outline-danger btn-block btn-sm">Comprar</button>
+
                                 </div>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                                    <h4 class="pt-1 pb-2">Saiba mais</h4>
 
 
-                                    <button type= "button" class="btn btn-outline-danger btn-block btn-sm">Comprar</button>
+
                                 </div>
                             </div>
                         </div>
@@ -149,8 +149,8 @@
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
     <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
+
+<
   </div>
 
 	</div>
@@ -168,7 +168,7 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
+                    <div class="card card-radius h-100">
                         <a href="shop-single.html">
                             <img src="/img/banner1.jpg" height="300" class="card-img-top" alt="...">
                         </a>
@@ -182,7 +182,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-90">
+                    <div class="card card-radius h-90">
                         <a href="shop-single.html">
                             <img src="/img/banner2.jpg" height="300" class="card-img-top" alt="...">
                         </a>
@@ -198,7 +198,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-90">
+                    <div class="card card-radius h-100">
                         <a href="shop-single.html">
                             <img src="/img/product1.jpg" class="card-img-top" alt="..."height="220">
                         </a>
@@ -221,7 +221,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-90">
+                    <div class="card card-radius h-90">
                         <a href="shop-single.html">
                             <img src="/img/comic-con.png" class="card-img-top" alt="...">
                         </a>
@@ -235,7 +235,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-90">
+                    <div class="card card-radius h-90">
                         <a href="shop-single.html">
                             <img src="/img/comic-con.png" class="card-img-top" alt="...">
                         </a>
@@ -249,7 +249,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-90">
+                    <div class="card card-radius h-90">
                         <a href="shop-single.html">
                             <img src="/img/comic-con.png" class="card-img-top" alt="...">
                         </a>
@@ -269,6 +269,6 @@
 
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/templatemo.js"></script>
-    
+
 @endsection
 
