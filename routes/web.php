@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,16 @@ use App\Http\Controllers\ProductsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+require __DIR__.'/auth.php';
 
 Route::get('/', [ProductsController::class, 'index'])->name('product.index');
 Route::get('/product/{product}', [ProductsController::class, 'show'])->name('product.show');

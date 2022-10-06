@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS only -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
     <link rel="stylesheet" href="/css/fontawesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/templatemo.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="/css/fontawesome.min.css">
+    @yield('css')
 
 </head>
 <body>
@@ -37,7 +38,7 @@
 
                     <form class="d-flex me-auto w-50 ms-4" role="search">
                         <input class="form-control me-2" type="search" placeholder="Pesquisar eventos, shows, teatros.." aria-label="Search">
-                        <button class="input-group-text border-0 me-2" id="search-addon">
+                        <button class="input-group-text border-0" id="search-addon">
                             <i class="fas fa-search" id="magnifying-glass"></i>
                         </button>
                     </form>
