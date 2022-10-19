@@ -1,0 +1,53 @@
+
+.container {
+
+	margin: 0 auto;
+	
+}
+
+
+section {
+
+	width: 100%;
+}
+
+
+.creations {
+	
+	display: flex;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+
+}
+
+.creations li {
+	height: 450px ;
+	font-family: sans-serif;
+	font-size: 30px;
+	text-transform: uppercase;
+	padding: 20px 30px;
+	display: flex;
+	align-items: flex-end;
+    color: white;
+
+}
+
+.creations-header{
+
+	font-family: sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+
+
+}
+
+.btn {
+
+	padding: 10px 20px;
+	background: none;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
