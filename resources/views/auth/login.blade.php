@@ -29,7 +29,7 @@
 
                 <div class="input_box">
                     <x-input-label for="password" :value="__('Password')" />
-                    <input required autocomplete="current-password" type="password" placeholder="Senha" id="email" name="senha">
+                    <input required autocomplete="current-password" type="password" placeholder="Senha" id="email" name="password">
                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 </div>
                 <div class="flex items-center justify-end mt-4">
