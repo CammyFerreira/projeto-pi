@@ -24,3 +24,5 @@ require __DIR__.'/auth.php';
 Route::get('/', [ProductsController::class, 'index'])->name('product.index');
 Route::get('/product/{product}', [ProductsController::class, 'show'])->name('product.show');
 
+//public const HOME = '/dashboard'; --> Arquivo app\Providers\RouteServiceProvider.php
+
