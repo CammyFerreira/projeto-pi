@@ -45,8 +45,15 @@
                     <a class="nav-icon position-relative text-decoration-none me-2" href="#">
                         <i class="fa fa-fw fa-cart-arrow-down mr-1 fa-2x" id="cart"></i>
                     </a>
-                    <button type="button" class="btn me-2" href="contact.html" id="btnLogin">Entre</button>
-                    <button type="button" class="btn" href="contact.html" id="btnSign">Cadastre-se</button>
+                    <h1>
+                        @if (Auth::user())
+                            {{ Auth::user()->USUARIO_NOME }}
+                        @else
+                        @endif
+                        <button type="button" class="btn me-2" href="contact.html" id="btnLogin">Entre</button>
+                        <button type="button" class="btn" href="contact.html" id="btnSign">Cadastre-se</button>
+                            
+                    </h1>
                 </div>
             </div>
         </nav>

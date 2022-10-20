@@ -41,12 +41,9 @@ class RegisteredUserController extends Controller
             'USUARIO_CPF' => '22222222222',
         ]);
 
-        dd($user);
-
         event(new Registered($user));
-
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect(route('product.index'));
     }
 }
