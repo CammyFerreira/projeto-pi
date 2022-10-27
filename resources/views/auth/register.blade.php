@@ -3,8 +3,8 @@
 <link rel="stylesheet" href="/css/register.css">
 @endsection
 @section('main')
-        
-        <a href="/" id="back">← VOLTAR PARA LOGIN</a>
+
+        <a href="{{route('login')}}" id="back">← VOLTAR PARA LOGIN</a>
 
         <div class="main-container">
 

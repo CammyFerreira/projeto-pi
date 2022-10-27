@@ -15,7 +15,7 @@
     </div>
 
     <x-auth-session-status class="mb-4" :status="session('status')" />
-    
+
     <div class="login_body">
         <div class="login_box">
             <h2>Entrar</h2>
@@ -48,7 +48,7 @@
 
         <div class="login_footer">
             <div class="sign_up">
-                <p>Novo por aqui? <a href="../cadastro/cadastro.html">Cadastre-se.</a></p>
+                <p>Novo por aqui? <a href="{{route('register')}}">Cadastre-se.</a></p>
             </div>
 
             <div class="terms">

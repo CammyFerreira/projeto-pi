@@ -29,9 +29,6 @@
                             <a class="nav-link active text-dark" href="../">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Sobre</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" href="#">Categorias</a>
                         </li>
                     </ul>
@@ -45,15 +42,23 @@
                     <a class="nav-icon position-relative text-decoration-none me-2" href="#">
                         <i class="fa fa-fw fa-cart-arrow-down mr-1 fa-2x" id="cart"></i>
                     </a>
-                    <h1>
+                    <h3>
                         @if (Auth::user())
                             {{ Auth::user()->USUARIO_NOME }}
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
                         @else
+                            <a class="btn me-2" href="{{route('login')}}" id="btnLogin">Entre</a>
+                            <a class="btn" href="{{route('register')}}" id="btnSign">Cadastre-se</a>
+
                         @endif
-                        <button type="button" class="btn me-2" href="contact.html" id="btnLogin">Entre</button>
-                        <button type="button" class="btn" href="contact.html" id="btnSign">Cadastre-se</button>
-                            
-                    </h1>
+
+                    </h3>
                 </div>
             </div>
         </nav>
