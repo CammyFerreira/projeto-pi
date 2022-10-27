@@ -1,30 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Loja virtual</title>
-
-    <!--Import Google Icon Font-->
-    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" media="screen,projection">
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <link href="/css/styles.css" rel="stylesheet">
-
-</head>
-
-<body>
-
+@extends('layout')
+@section('main')
+<script>
+        function remove(route){
+            if(confirm('Deseja remover o produto?'))
+                window.location = route;
+        }
+    </script>
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="container">
     <div class="row">
-        <h3>Produtos no carrinho</h3>
-    
+        <h3>Carrinho de compras</h3>
+        @foreach ($cart as $item)
         <div class="divider"></div>
         <div class="row col s12 m12 l12">
-           
-                <h5 class="col l6 s12 m6"> Pedido ID:  </h5>
-                <h5 class="col l6 s12 m6"> Status: </h5>
                 <form method="POST" action="">
                    
                     <input type="hidden" name="pedido_id" value="">
@@ -42,51 +30,41 @@
         
                             <tr>
                                 <td>
-                                    <img width="100" height="100" src="public/img/banner2.jpg">
+                                    <img width="100" height="100" src="/img/banner2.jpg">
                                 </td>
                                 <td class="center-align">
                                     <div class="center-align">
                                         <a class="col l4 m4 s4" href="#" onclick="carrinhoRemoverProduto()">
                                             <i class="material-icons small">remove_circle_outline</i>
                                         </a>
-                                        <span class="col l4 m4 s4"> Quantidade:  </span>
+                                        <span class="col l4 m4 s4"> {{ $item->ITEM_QTD }}</span>
                                         <a class="col l4 m4 s4" href="#" onclick="carrinhoAdicionarProduto()">
                                             <i class="material-icons small">add_circle_outline</i>
                                         </a>
                                     </div>
-                                    <a href="#" onclick="carrinhoRemoverProduto()" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Retirar produto do carrinho?">Retirar produto</a>
+                                    <a href="#" onclick="remove('{{ route('item.destroy', $item->id) }}');" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Retirar produto do carrinho?">Retirar produto</a>
                                 </td>
-                                <td> Nome </td>
-                                <td>Valor</td>
-                                <td>Descontos</td>
+                                <td>{{ $item->Produto->PRODUTO_NOME }}</td>
+                                <td>{{ $item->Produto->PRODUTO_PRECO }}</td>
+                                <td>{{ $item->Produto->PRODUTO_DESCONTO }}</td>
                                 <td>Total</td>
                             </tr>
                         </tbody>
                         <tfoot>
-                            <tr>
+                            
+                        </tfoot>
+                    </table>
+                </form>
+        </div>
+        @endforeach
+        <tr>
                                 <td colspan="3"></td>
                                 <td><strong>Total do pedido</strong></td>
                                 <td></td>
                                 <td>Total</td>
                             </tr>
-                        </tfoot>
-                    </table>
-                </form>
-        </div>
-
     </div>
 
 </div>
-</body>
 
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-<script type="text/javascript">
-    $( document ).ready(function(){
-        $(".button-collapse").sideNav();
-        $('select').material_select();
-    });
-</script>
-
-</html>
+@endsection

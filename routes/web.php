@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\CartController;
 
 
 /*
@@ -23,6 +24,7 @@ require __DIR__.'/auth.php';
 
 Route::get('/', [ProductsController::class, 'index'])->name('product.index');
 Route::get('/product/{product}', [ProductsController::class, 'show'])->name('product.show');
+Route::get('/cart', [CartController::class, 'index']);
+//resto da rota acima: ->middleware(['auth']);
 
 //public const HOME = '/dashboard'; --> Arquivo app\Providers\RouteServiceProvider.php
-

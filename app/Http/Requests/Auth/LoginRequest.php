@@ -60,16 +60,18 @@ class LoginRequest extends FormRequest
             'USUARIO_EMAIL' => $this->only('email')['email']
         ])->first();
         
-        if(Hash::check($this->only('password')['password'], $user->USUARIO_SENHA)){
-            Auth::login($user);
-            return redirect(route('product.index'));
-        } else {
-            throw ValidationException::withMesseges([
-                'email' => trans('auth.failed')
-            ]);
+        if($user){
+            if(Hash::check($this->only('password')['password'], $user->USUARIO_SENHA)){
+                Auth::login($user);
+                return redirect(route('product.index'));
+            } else {
+                throw ValidationException::withMesseges([
+                    'email' => trans('auth.failed')
+                ]);
+            }
         }
 
-
+        return redirect(route('login'));
         RateLimiter::clear($this->throttleKey());
     }
 
