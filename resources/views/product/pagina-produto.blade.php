@@ -10,7 +10,7 @@
                         <img class="rounded" src="/img/banner1.jpg" alt="Card image cap" id="product-detail">
                     </div>
                 </div>
-               
+
                 <div class="col-lg-7 mt-5">
                     <div class="card" id="card">
                         <div class="card-body">
@@ -52,7 +52,8 @@
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-lg" name="submit" value="buy" id="btnBuy">Comprar</button>
+                                        {{-- INSERIR HREF > href="{{route('cart')}}" --}}
+                                        <a class="btn btn-lg" name="submit" id="btnBuy">Comprar</a>
                                     </div>
 
                                 </div>
@@ -67,4 +68,3 @@
 
 
 @endsection
-   
