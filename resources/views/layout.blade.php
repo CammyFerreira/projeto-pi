@@ -45,7 +45,7 @@
                     <h3>
                         @if (Auth::user())
                             {{ Auth::user()->USUARIO_NOME }}
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <a class="btn" id="btnLogout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 Logout
                             </a>
 

@@ -52,8 +52,7 @@
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                        {{-- INSERIR HREF > href="{{route('cart')}}" --}}
-                                        <a class="btn btn-lg" name="submit" id="btnBuy">Comprar</a>
+                                        <a class="btn btn-lg" name="submit" id="btnBuy" href="{{route('cart')}}">Comprar</a>
                                     </div>
 
                                 </div>
