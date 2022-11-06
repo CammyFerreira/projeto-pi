@@ -50,3 +50,23 @@
     border-radius: 1cm;
     height: 500px;
 }
+
+button {
+    background-color: #126E82;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+.container-img {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

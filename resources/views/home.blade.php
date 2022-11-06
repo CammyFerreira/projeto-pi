@@ -193,21 +193,23 @@
                 <div class="row">
                     <div class="col-12 col-md-4 mb-4">
                         <div class="card card-radius h-100">
-                            <a href="shop-single.html">
+                            <a href="shop-single.html" class="container-img">
                                 <img src="/img/banner1.jpg" height="300" class="card-img-top" alt="...">
                             </a>
                             <div class="card-body">
-                                <a href="shop-single.html" class="h2 text-decoration-none text-dark">Guns n' Roses</a>
-                                <p class="card-text">
-                                    Uma das maiores bandas de rock está de volta ao Brasil
-                                </p>
+                                <div>
+                                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">Guns n' Roses</a>
+                                    <p class="card-text">
+                                        Uma das maiores bandas de rock está de volta ao Brasil
+                                    </p>
+                                </div>
                                 <button>Ver Mais</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 mb-4">
-                        <div class="card card-radius h-90">
-                            <a href="shop-single.html">
+                        <div class="card card-radius h-100">
+                            <a href="shop-single.html" class="container-img">
                                 <img src="/img/banner2.jpg" height="300" class="card-img-top" alt="...">
                             </a>
                             <div class="card-body">
@@ -223,7 +225,7 @@
                     </div>
                     <div class="col-12 col-md-4 mb-4">
                         <div class="card card-radius h-100">
-                            <a href="shop-single.html">
+                            <a href="shop-single.html" class="container-img">
                                 <img src="/img/product1.jpg" class="card-img-top" alt="..." height="220">
                             </a>
                             <div class="card-body">
@@ -232,15 +234,6 @@
                                     A cada edição apresenta mais atrações para o público se divertir com milhares de estações, sejam máquinas arcade, plataformas mobile, PCs, óculos de realidade virtual, consoles, board games, card games ou qualquer outra forma jogar.
                                 </p>
                                 <button>Ver Mais</button>
-                                <style>
-                                    button {
-                                        background-color: #126E82;
-                                        border-radius: 10px;
-                                        border: none;
-                                        color: white;
-
-                                    }
-                                </style>
                             </div>
                         </div>
                     </div>
