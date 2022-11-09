@@ -113,60 +113,6 @@
             </ul>
         </section>
 
-
-        <!-- <div class="row">
-		
-  <div class="swiper-container">
-<div class="swiper-wrapper">
-      <div class="swiper-slide">
-          <div class="row">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img"><img src="/img/show.jpg" width="260"></div>
-                                <div class="card-body">
-                                   <h5>Shows</h5>
-                                   <h4 class="pt-1 pb-2">Saiba mais</h4>
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img"><img src="/img/teatro.jpg" width="260"></div>
-                                <div class="card-body">
-                                   <h5>Teatro</h5>
-                                   <h4 class="pt-1 pb-2">Saiba mais</h4>
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img"><img src="/img/standup.jpg" width="260"></div>
-                                <div class="card-body">
-                                   <h5>Stand-up</h5>
-                                   <h4 class="pt-1 pb-2">Saiba mais</h4>
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img"><img src="/img/show.jpg" width="260"></div>
-                                <div class="card-body">
-                                   <h5>Show</h5>
-                                   <h4 class="pt-1 pb-2">Saiba mais</h4>
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-      </div> -->
         <div class="swiper-slide">
 
         </div>

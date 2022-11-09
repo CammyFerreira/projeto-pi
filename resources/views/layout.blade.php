@@ -36,8 +36,8 @@
                         </li>
                     </ul>
 
-                    <form class="d-flex me-auto w-50 ms-4" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Pesquisar eventos, shows, teatros.." aria-label="Search">
+                    <form class="d-flex me-auto w-50 ms-4" role="search" action="/" method="GET">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar eventos, shows, teatros.." aria-label="Search" name="search">
                         <button class="input-group-text border-0" id="search-addon">
                             <i class="fas fa-search" id="magnifying-glass"></i>
                         </button>
