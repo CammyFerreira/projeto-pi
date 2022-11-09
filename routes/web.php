@@ -36,3 +36,4 @@ Route::get('/pedidos', [PedidosController::class, 'index']);
 
 
 Route::get('/category', [CategoriesController::class, 'index'])->name('category.index');
+Route::get('/category', [CategoriesController::class, 'index'])->name('category.index');
