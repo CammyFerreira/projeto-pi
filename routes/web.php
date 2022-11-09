@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\PedidosController;
+use App\Http\Controllers\CategoriesController;
 
 
 /*
@@ -16,6 +17,7 @@ use App\Http\Controllers\PedidosController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -30,3 +32,9 @@ Route::get('/pedidos', [PedidosController::class, 'index']);
 //resto da rota acima: ->middleware(['auth']);
 
 //public const HOME = '/dashboard'; --> Arquivo app\Providers\RouteServiceProvider.php
+<<<<<<< HEAD
+=======
+
+
+Route::get('/category', [CategoriesController::class, 'index'])->name('category.index');
+>>>>>>> 45d8c1cee3a18f57a08ec0ec79111aa594c10911
