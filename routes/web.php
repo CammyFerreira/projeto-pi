@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\CategoriesController;
+
 
 
 /*
@@ -15,6 +17,7 @@ use App\Http\Controllers\ProductsController;
 |
 */
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -26,3 +29,5 @@ Route::get('/product/{product}', [ProductsController::class, 'show'])->name('pro
 
 //public const HOME = '/dashboard'; --> Arquivo app\Providers\RouteServiceProvider.php
 
+
+Route::get('/category', [CategoriesController::class, 'index'])->name('category.index');
