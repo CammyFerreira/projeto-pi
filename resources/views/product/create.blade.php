@@ -11,15 +11,19 @@
         @CSRF
         <div class="form-group col-md-2 mt-4">
             <span style="color: white" class="form-label">Nome</span>
-            <input type="text" class=form-control" name="nome">
+            <input type="text" class=form-control" name="produto_nome">
         </div>
         <div class="form-group col-md-2 mt-4">
             <span style="color: white" class="form-label">Preço</span>
-            <input type="number" class=form-control" name="preco">
+            <input type="number" class=form-control" name="produto_preco">
+        </div>
+        <div class="form-group col-md-2 mt-4">
+            <span style="color: white" class="form-label">Desconto</span>
+            <input type="number" class=form-control" name="produto_desconto">
         </div>
         <div class="form-group col-md-2 mt-4">
             <span style="color: white" class="form-label">Descrição</span>
-            <textarea class="form-control" name="descricao"></textarea>
+            <textarea class="form-control" name="produto_desc"></textarea>
         </div>
         <div>
             <button type="submit" class="btn btn-success col-md-2 mt-4">Salvar</button>

@@ -9,24 +9,21 @@ class ProductsController extends Controller
 {
     public function index(){
         //direciona para o HTML
-        return view('product.index')->with('products', Product::all());
+
+        $search = request('search');
+        if($search){
+            $products = Product::where([
+                ['produto_nome', 'like', '%'.$search.'%']
+            ])->get();
+        }else{
+            $products = Product::all();
+        }
+
+        return view('home', ['products' => $products, 'serach' => $search]);
     }
 
-    public function create(){
-        return view('product.create');
+    public function show(Product $product){
+        return view('product.pagina-produto')->with('product', $product);
     }
 
-    public function store(Request $request){
-        Product::create($request->all());
-        return redirect(route('product.index'));
-    }
-
-    function edit(Product $product){
-        return view('product.edit')->with('product', $product);
-    }
-
-    function update(Product $product, Request $request){
-        $product->update(['name' => $request->name]);
-        return redirect(route('product.index'));
-    }
 }

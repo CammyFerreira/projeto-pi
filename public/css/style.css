@@ -1,0 +1,47 @@
+#navbar{
+    background-color: #ffffff;
+}
+#search-addon{
+    background-color: #126E82;
+}
+#cart{
+    color: #126E82;
+}
+#magnifying-glass{
+    color: #ffffff;
+}
+#btnSign{
+    color: #126E82;
+    border: 1px solid #126E82;
+}
+#btnLogin{
+    color: #126E82;
+    border: 1px solid #126E82;
+}
+#btnSeeMore{
+    background-color: #126E82;
+}
+#btnBuy{
+    background-color: #126E82;
+    color: #ffffff;
+}
+#btn-minus{
+    background-color: #126E82;
+    color: #ffffff;
+}
+#btn-plus{
+    background-color: #126E82;
+    color: #ffffff;
+}
+#card{
+    border: 1px solid #126E82;
+}
+.carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: auto;
+    border-radius: 1cm;
+    height: 500px;
+}
