@@ -91,31 +91,21 @@
         </div>
 
         <section class="container">
-
-        
             <div class="creations-header">
-
             <link rel="stylesheet" href="/public/css/teste.css">
-            
                 <h2>Outros Eventos</h2>
-
                 <button class="btn">Veja mais</button>
             </div>
-
-
             <ul class="creations">
-                <li style="background: url(/img/teatro.jpg) center top/cover no-repeat">Teatro</li>
+                <li style="background: url(/img/teatro.jpg) center top/cover no-repeat">Musica</li>
                 <li style="background: url(/img/show.jpg) center top/cover no-repeat">Show</li>
                 <li style="background: url(/img/standup.jpg) center top/cover no-repeat">Standup</li>
-                <li style="background: url(/img/show.jpg) center top/cover no-repeat">Show</li>
+                <li style="background: url(/img/show.jpg) center top/cover no-repeat">Cinema</li>
                 <li style="background: url(/img/teatro.jpg) center top/cover no-repeat">Teatro</li>
-              
             </ul>
         </section>
 
-        <div class="swiper-slide">
-
-        </div>
+        <div class="swiper-slide"></div>
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>

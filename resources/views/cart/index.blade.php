@@ -58,11 +58,11 @@
         </div>
         @endforeach
         <tr>
-                                <td colspan="3"></td>
-                                <td><strong>Total do pedido</strong></td>
-                                <td></td>
-                                <td>Total</td>
-                            </tr>
+            <td colspan="3"></td>
+            <td><strong>Total do pedido</strong></td>
+            <td></td>
+            <td>Total</td>
+        </tr>
     </div>
 
 </div>
