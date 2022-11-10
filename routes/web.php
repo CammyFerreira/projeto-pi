@@ -7,6 +7,7 @@ use App\Http\Controllers\PedidosController;
 use App\Http\Controllers\CategoriesController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,4 +34,6 @@ Route::get('/pedidos', [PedidosController::class, 'index']);
 
 //public const HOME = '/dashboard'; --> Arquivo app\Providers\RouteServiceProvider.php
 
+
+Route::get('/category', [CategoriesController::class, 'index'])->name('category.index');
 Route::get('/category', [CategoriesController::class, 'index'])->name('category.index');

@@ -42,7 +42,7 @@
                                             <i class="material-icons small">add_circle_outline</i>
                                         </a>
                                     </div>
-                                    <a href="#" onclick="remove('{{ route('item.destroy', $item->id) }}');" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Retirar produto do carrinho?">Retirar produto</a>
+                                    <a href="#" onclick="remove('{{ route(item.destroy, $item->id) }}');" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Retirar produto do carrinho?">Retirar produto</a>
                                 </td>
                                 <td>{{ $item->Produto->PRODUTO_NOME }}</td>
                                 <td>{{ $item->Produto->PRODUTO_PRECO }}</td>
