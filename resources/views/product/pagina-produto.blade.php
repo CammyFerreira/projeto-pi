@@ -52,12 +52,10 @@
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                        <a class="btn btn-lg" name="submit" id="btnBuy" href="{{route('cart')}}">Comprar</a>
+                                        <a class="btn btn-lg" name="submit" id="btnBuy" href="{{route('cart.index')}}">Comprar</a>
                                     </div>
-
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>

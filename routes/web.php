@@ -28,12 +28,11 @@ require __DIR__.'/auth.php';
 
 Route::get('/', [ProductsController::class, 'index'])->name('product.index');
 Route::get('/product/{product}', [ProductsController::class, 'show'])->name('product.show');
-Route::get('/cart', [CartController::class, 'index']);
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::get('/pedidos', [PedidosController::class, 'index']);
 //resto da rota acima: ->middleware(['auth']);
 
 //public const HOME = '/dashboard'; --> Arquivo app\Providers\RouteServiceProvider.php
 
 
-Route::get('/category', [CategoriesController::class, 'index'])->name('category.index');
 Route::get('/category', [CategoriesController::class, 'index'])->name('category.index');
