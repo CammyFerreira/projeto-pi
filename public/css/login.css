@@ -88,6 +88,7 @@ body::before {
     background-color: #fc1722;
     cursor: pointer;
 }
+
 .remember {
     display: flex;
     align-items: center;
@@ -98,16 +99,7 @@ body::before {
     height: 25px;
 }
 
-.sign_up {
-    color: #737373;
-    font-size: 16px;
-}
 
-.sign_up a {
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
-}
 
 .sign_up a:hover {
     text-decoration: underline;
