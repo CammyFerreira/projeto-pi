@@ -1,7 +1,6 @@
     @extends('layout')
     @section('main')
 
-    <!-- Start Banner Hero -->
     <div class="carousel">
         <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -75,10 +74,7 @@
             <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
         </ol>
     </div>
-    <!-- End Banner Hero -->
 
-
-    <!-- Start Categories of The Month -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
     <div class="container">
@@ -105,24 +101,14 @@
                 <li style="background: url(/img/standup.jpg) center top/cover no-repeat">Standup</li>
                 <li style="background: url(/img/show.jpg) center top/cover no-repeat">Cinema</li>
                 <li style="background: url(/img/teatro.jpg) center top/cover no-repeat">Teatro</li>
+                @endforeach
             </ul>
         </section>
-
-        <div class="swiper-slide"></div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-
-    < </div>
+    
 
         </div>
         </div>
-        <!-- End Categories of The Month -->
-
-
-        <!-- Start Featured Product -->
-
 
         <section class="bg-light">
             <div class="container py-5">
@@ -131,13 +117,12 @@
                         <h1 class="h1">Destaques</h1>
                     </div>
                 </div>
-
                     <div class="row">
                     @foreach ($products as $product)
                         <div class="col-12 col-md-4 mb-4">
                             <div class="card card-radius h-100">
                                 <a href="shop-single.html">
-                                    <img src="/img/banner1.jpg" height="300" class="card-img-top" alt="...">
+                                    <img src="/img/comic-con.png" height="300" class="card-img-top" alt="...">
                                 </a>
                                 <div class="card-body">
                                     <a href="shop-single.html" class="h2 text-decoration-none text-dark">{{$product->PRODUTO_NOME}}</a>
@@ -147,106 +132,10 @@
                                     <button class="btn-primary">Ver Mais</button>
                                 </div>
                             </div>
-                         {{-- <div class="col-12 col-md-4 mb-4">
-                            <div class="card card-radius h-100">
-                                <a href="shop-single.html">
-                                    <img src="/img/banner1.jpg" height="300" class="card-img-top" alt="...">
-                                </a>
-                                <div class="card-body">
-                                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">rock</a>
-                                    <p class="card-text">
-                                        yeaaaaa
-                                    </p>
-                                    <button>Ver Mais</button>
-                                </div>
-                            </div>
-                        </div> --}}
-                        {{--<div class="col-12 col-md-4 mb-4">
-                            <div class="card card-radius h-90">
-                                <a href="shop-single.html">
-                                    <img src="/img/banner2.jpg" height="300" class="card-img-top" alt="...">
-                                </a>
-                                <div class="card-body">
-                                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">Lollapalooza Brasil</a>
-                                    <p class="card-text">
-                                        Esse é o Lollapalooza Brasil,
-                                        um festival que ocupa os 600mil m² do Autódromo de Interlagos em São Paulo com música, arte, gastronomia, moda e muito mais.
-                                    </p>
-                                    <button>Ver Mais</button>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 mb-4">
-                            <div class="card card-radius h-100">
-                                <a href="shop-single.html">
-                                    <img src="/img/product1.jpg" class="card-img-top" alt="..." height="220">
-                                </a>
-                                <div class="card-body">
-                                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">Brasil Game Show</a>
-                                    <p class="card-text">
-                                        A cada edição apresenta mais atrações para o público se divertir com milhares de estações, sejam máquinas arcade, plataformas mobile, PCs, óculos de realidade virtual, consoles, board games, card games ou qualquer outra forma jogar.
-                                    </p>
-                                    <button>Ver Mais</button>
-                                    <style>
-                                        button {
-                                            background-color: #126E82;
-                                            border-radius: 10px;
-                                            border: none;
-                                            color: white;
-
-                                        }
-                                    </style>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 mb-4">
-                            <div class="card card-radius h-90">
-                                <a href="shop-single.html">
-                                    <img src="/img/comic-con.png" class="card-img-top" alt="...">
-                                </a>
-                                <div class="card-body">
-                                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">Comic Con 2022</a>
-                                    <p class="card-text">
-                                        Daria para ficar o dia inteiro tentando definir o maior festival de cultura pop do planeta e não seria suficiente. A CCXP não é só um lugar físico, ela é uma ideia, um sentimento. É cada pessoa que se permite viver o épico.
-                                    </p>
-                                    <button>Ver Mais</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 mb-4">
-                            <div class="card card-radius h-90">
-                                <a href="shop-single.html">
-                                    <img src="/img/comic-con.png" class="card-img-top" alt="...">
-                                </a>
-                                <div class="card-body">
-                                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">Comic Con 2022</a>
-                                    <p class="card-text">
-                                        Daria para ficar o dia inteiro tentando definir o maior festival de cultura pop do planeta e não seria suficiente. A CCXP não é só um lugar físico, ela é uma ideia, um sentimento. É cada pessoa que se permite viver o épico.
-                                    </p>
-                                    <button>Ver Mais</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 mb-4">
-                            <div class="card card-radius h-90">
-                                <a href="shop-single.html">
-                                    <img src="/img/comic-con.png" class="card-img-top" alt="...">
-                                </a>
-                                <div class="card-body">
-                                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">Comic Con 2022</a>
-                                    <p class="card-text">
-                                        Daria para ficar o dia inteiro tentando definir o maior festival de cultura pop do planeta e não seria suficiente. A CCXP não é só um lugar físico, ela é uma ideia, um sentimento. É cada pessoa que se permite viver o épico.
-                                    </p>
-                                    <button>Ver Mais</button>
-                                </div> --}}
-                            </div>
-                        @endforeach
                     </div>
-                </div>
+                    @endforeach
             </div>
         </section>
-        <!-- End Featured Product -->
 
         <script src="/js/bootstrap.bundle.min.js"></script>
         <script src="/js/templatemo.js"></script>
