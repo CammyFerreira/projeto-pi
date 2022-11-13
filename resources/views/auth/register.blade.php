@@ -34,7 +34,7 @@
             </div>
             <div class="flex items-center justify-end mt-4">
 
-            <div class="full-box">
+            <div class="full-button">
                     <input id="btn-submit" type="submit" value="Registrar">
                 </div>
             </div>

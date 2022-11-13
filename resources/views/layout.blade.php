@@ -74,15 +74,15 @@
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
-                            Rua sobe e desce
+                            Rua Sol da Meia-Noite, 123 
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:010-020-0340">123456789</a>
+                            <a class="text-decoration-none" href="tel:010-020-0340">+55 11 7070-7070</a>
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                            <a class="text-decoration-none" href="mailto:info@company.com">faleconosco@bravo4fun.com</a>
                         </li>
                     </ul>
                 </div>
@@ -133,7 +133,6 @@
                 </div>
             </div>
         </div>
-
     </footer>
 
 </body>

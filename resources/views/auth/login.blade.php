@@ -1,4 +1,38 @@
-<!DOCTYPE html>
+@extends('layout')
+@section('css')
+<link rel="stylesheet" href="/css/register.css">
+@endsection
+@section('main')
+        <div class="main-container">
+
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
+            <h2 id="titulo">Login</h2>
+
+            <div class="full-box">
+                <input required type="email" name="name" id="input" placeholder="E-mail" data-required
+                    data-min-length="3" data-max-length="50">
+            </div>
+            <div class="full-box">
+                <input required type="password" name="password" id="input" placeholder="Senha" required
+                    min-length="11" max-length="11">
+            </div>
+
+            <div class="flex items-center justify-end mt-4">
+
+            <div class="full-box">
+                    <input id="btn-submit" type="submit" value="Entrar">
+                </div>
+
+                <div class="sign_up">
+                    <p><u>Novo por aqui?</u><a href="{{route('register')}}"> Cadastre-se</a></p>
+                </div>
+            </div>
+        </form>
+</div>
+@endsection
+
+<!--<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -55,7 +89,7 @@
                 <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a href="#">Saiba mais</a></p>
             </div>
 
-                 <!-- Remember Me -->
+                  Remember Me
             <div class="block mt-4">
                 <label for="remember_me" class="inline-flex items-center">
                     <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
@@ -66,4 +100,4 @@
     </div>
 </body>
 
-</html>
+</html>-->
