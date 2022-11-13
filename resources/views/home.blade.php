@@ -106,10 +106,7 @@
         </section>
     </div>
     
-
-        </div>
-        </div>
-
+    
         <section class="bg-light">
             <div class="container py-5">
                 <div class="row text-center py-3">
