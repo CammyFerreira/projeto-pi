@@ -52,7 +52,11 @@
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
+                                    @if (Auth::user())
                                         <a class="btn btn-lg" name="submit" id="btnBuy" href="{{route('cart.index')}}">Comprar</a>
+                                    @else
+                                    <a class="btn btn-lg" name="submit" id="btnBuy" href="{{route('login')}}">Comprar</a>
+                                    @endif
                                     </div>
                                 </div>
                             </form>
