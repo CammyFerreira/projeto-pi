@@ -35,17 +35,20 @@
                                 <div class="row">
                                     <div class="col-auto">
                                         <div class="col-auto">
-                                            <ul class="list-inline pb-3">
+                                            
+                                        Quantidade: <input type="number" id="quantidade">
+                                     <!--    <ul class="list-inline pb-3">
                                                 <li class="list-inline-item text-right">
                                                     Quantidade:
                                                     <input type="hidden" name="product-quanity" id="product-quanity" value="1">
                                                 </li>
                                                 <li class="list-inline-item"><span class="btn" id="btn-minus">-</span></li>
-                                                <li class="list-inline-item"><span class="badge bg-primary" id="var-value">1</span></li>
+                                                <li class="list-inline-item"><span class="qtd" id="var-value">1</span></li>
                                                 <li class="list-inline-item"><span class="btn" id="btn-plus">+</span></li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> -->
+                                    
                                     <div class="col-auto">
 
                                     </div>

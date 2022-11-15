@@ -10537,3 +10537,8 @@ section {
 .sign-out>span {
     margin: 0.1em;
 }
+
+.qtd {
+    width: 20px;
+}
+

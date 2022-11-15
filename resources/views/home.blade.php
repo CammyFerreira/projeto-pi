@@ -95,13 +95,13 @@
                 <button class="btn">Veja mais</button>
             </div>
             <ul class="creations">
-                @foreach($categories as $cat) 
-                <li style="background: url(/img/teatro.jpg) center top/cover no-repeat">{{ $cat->CATEGORIA_NOME }}</li>
+                
+                <li style="background: url(/img/teatro.jpg) center top/cover no-repeat"></li>
                 <li style="background: url(/img/show.jpg) center top/cover no-repeat">Show</li>
                 <li style="background: url(/img/standup.jpg) center top/cover no-repeat">Standup</li>
                 <li style="background: url(/img/show.jpg) center top/cover no-repeat">Cinema</li>
                 <li style="background: url(/img/teatro.jpg) center top/cover no-repeat">Teatro</li>
-                @endforeach
+           
             </ul>
         </section>
     </div>
