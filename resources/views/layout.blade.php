@@ -39,9 +39,16 @@
                             <i class="fas fa-search" id="magnifying-glass"></i>
                         </button>
                     </form>
-                    <a class="nav-icon position-relative text-decoration-none me-2" href="#">
+                    @if (Auth::user())
+                    <a class="btn me-2" href="">Meus pedidos</a> <!-- COLOCAR ROTA DE MEUS PEDIDOS -->
+                    <a class="nav-icon position-relative text-decoration-none me-2" href="{{ route('cart.index') }}">
                         <i class="fa fa-fw fa-cart-arrow-down mr-1 fa-2x" id="cart"></i>
                     </a>
+                    @else
+                    <a class="nav-icon position-relative text-decoration-none me-2" href="{{ route('login') }}">
+                        <i class="fa fa-fw fa-cart-arrow-down mr-1 fa-2x" id="cart"></i>
+                    </a>
+                    @endif
                     <h3>
                         @if (Auth::user())
                             {{ Auth::user()->USUARIO_NOME }}
@@ -64,8 +71,9 @@
         </nav>
 
         @yield('main')
+</body>
 
-        <footer id="tempaltemo_footer">
+    <footer id="tempaltemo_footer">
         <div class="container">
             <div class="row">
 
@@ -134,8 +142,6 @@
             </div>
         </div>
     </footer>
-
-</body>
 
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/templatemo.js"></script>

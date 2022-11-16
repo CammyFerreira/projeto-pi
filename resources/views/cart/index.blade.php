@@ -10,6 +10,11 @@
 <div class="container">
     <div class="row">
         <h3>Carrinho de compras</h3>
+        <div>
+            <p>Seu carrinho de compras está vazio</p>
+            <img src="/img/cart.png" width="100" height="100">
+            <a href="../">Voltar</a>
+        </div>
         @foreach ($cart as $item)
         <div class="divider"></div>
         <div class="row col s12 m12 l12">
