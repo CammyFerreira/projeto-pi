@@ -10,16 +10,20 @@
 <div class="container">
     <div class="row">
         <h3>Carrinho de compras</h3>
+        @if (count($cart) == 0)
         <div>
             <p>Seu carrinho de compras está vazio</p>
-            <img src="/img/cart.png" width="100" height="100">
-            <a href="../">Voltar</a>
+            <img src="/img/cart.png" width="250" height="250">
+            <div>
+            <a class="backButton" href="../">Voltar</a>
+            </div>
         </div>
+        @endif
         @foreach ($cart as $item)
         <div class="divider"></div>
         <div class="row col s12 m12 l12">
                 <form method="POST" action="">
-                   
+
                     <input type="hidden" name="pedido_id" value="">
                     <table>
                         <thead>
@@ -32,7 +36,7 @@
                             </tr>
                         </thead>
                         <tbody>
-        
+
                             <tr>
                                 <td>
                                     <img width="100" height="100" src="/img/banner2.jpg">
@@ -47,7 +51,7 @@
                                             <i class="material-icons small">add_circle_outline</i>
                                         </a>
                                     </div>
-                                    <a href="#" onclick="remove('{{ route(item.destroy, $item->id) }}');" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Retirar produto do carrinho?">Retirar produto</a>
+                                    <a href="#" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Retirar produto do carrinho?">Retirar produto</a>
                                 </td>
                                 <td>{{ $item->Produto->PRODUTO_NOME }}</td>
                                 <td>{{ $item->Produto->PRODUTO_PRECO }}</td>
@@ -56,18 +60,20 @@
                             </tr>
                         </tbody>
                         <tfoot>
-                            
+
                         </tfoot>
                     </table>
                 </form>
         </div>
         @endforeach
+        @if (count($cart) > 0)
         <tr>
             <td colspan="3"></td>
             <td><strong>Total do pedido</strong></td>
             <td></td>
             <td>Total</td>
         </tr>
+        @endif
     </div>
 
 </div>

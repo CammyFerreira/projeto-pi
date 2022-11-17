@@ -40,7 +40,7 @@
                         </button>
                     </form>
                     @if (Auth::user())
-                    <a class="btn me-2" href="">Meus pedidos</a> <!-- COLOCAR ROTA DE MEUS PEDIDOS -->
+                    <a class="btn me-2" href="{{ route('cart.pedidos') }}">Meus pedidos</a> <!-- COLOCAR ROTA DE MEUS PEDIDOS -->
                     <a class="nav-icon position-relative text-decoration-none me-2" href="{{ route('cart.index') }}">
                         <i class="fa fa-fw fa-cart-arrow-down mr-1 fa-2x" id="cart"></i>
                     </a>
@@ -82,7 +82,7 @@
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
-                            Rua Sol da Meia-Noite, 123 
+                            Rua Sol da Meia-Noite, 123
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>

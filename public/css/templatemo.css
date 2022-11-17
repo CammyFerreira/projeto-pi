@@ -1,4 +1,5 @@
 body, ul, li, p, a, label, input, div {
+  outline: 0 !important;
   font-family: 'Roboto', sans-serif;
   font-size: 18px !important;
   font-weight: 300 !important;
@@ -100,15 +101,15 @@ body, ul, li, p, a, label, input, div {
 .leaflet-control a, .leaflet-control { font-size: 10px !important;}
 .form-control { border: 1px solid #e8e8e8;}
 /* Footer */
-#tempaltemo_footer a { 
+#tempaltemo_footer a {
   color: #dcdde1;
 }
 
-#tempaltemo_footer a:hover { 
+#tempaltemo_footer a:hover {
   color: #68bb7d;
 }
 
-#tempaltemo_footer ul.footer-link-list li { 
+#tempaltemo_footer ul.footer-link-list li {
   padding-top: 20px;
 }
 

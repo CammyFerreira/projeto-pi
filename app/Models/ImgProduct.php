@@ -12,5 +12,9 @@ class ImgProduct extends Model
     protected $timestamp = false;
     protected $fillable = ['IMAGEM_ID', 'IMAGEM_ORDEM', 'PRODUTO_ID', 'IMAGEM_URL'];
     protected $table = 'PRODUTO_IMAGEM';
-    protected $primaryKey = 'produto_id';
+    protected $primaryKey = 'PRODUTO_ID';
+
+    public function imagem(){
+        return $this->belongsTo(Product::class, 'PRODUTO_ID', 'PRODUTO_ID');
+    }
 }

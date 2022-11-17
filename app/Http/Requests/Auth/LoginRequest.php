@@ -31,7 +31,7 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => ['required', 'string', 'email'],
+            'name' => ['required', 'string', 'email'],
             'password' => ['required', 'string'],
         ];
     }
@@ -56,10 +56,11 @@ class LoginRequest extends FormRequest
             ]);
         }
         */
+
         $user = User::where([
-            'USUARIO_EMAIL' => $this->only('email')['email']
+            'USUARIO_EMAIL' => $this->only('name')['name']
         ])->first();
-        
+
         if($user){
             if(Hash::check($this->only('password')['password'], $user->USUARIO_SENHA)){
                 Auth::login($user);
