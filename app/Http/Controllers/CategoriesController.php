@@ -14,21 +14,14 @@ class CategoriesController extends Controller
     }
 
 
-    public function create()
-    {
-        //
-    }
-
-
     public function store(Request $request)
     {
         //
     }
 
 
-    public function show($id)
-    {
-        //
+    public function show(Category $category){
+        return view('category.index')->with('category', $category);
     }
 
     public function edit($id)
