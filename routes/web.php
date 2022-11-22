@@ -34,5 +34,5 @@ Route::get('/pedidos', [PedidosController::class, 'index'])->name('cart.pedidos'
 
 //public const HOME = '/dashboard'; --> Arquivo app\Providers\RouteServiceProvider.php
 
-
 Route::get('/category', [CategoriesController::class, 'index'])->name('category.index');
+Route::get('/category/{category}', [CategoriesController::class, 'show'])->name('category.show');

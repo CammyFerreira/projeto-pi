@@ -1,12 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Categorias</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-</head>
-<body>
-    <h1>Categorias</h1>
-    
-</body>
-</html>
+@extends('layout')
+@section('main')
+<section class="bg-light">
+    <div class="container py-5">
+        <div class="row text-center py-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Destaques</h1>
+            </div>
+        </div>
+        <div class="row">
+        @foreach ($categories as $cat)
+        <div class="col-12 col-md-4 mb-4">
+            <div class="card card-radius h-100">
+                <a href="{{route('category.show', $cat->CATEGORIA_ID) }}">
+                    <img src="/img/comic-con.png" height="300" class="card-img-top" alt="...">
+                </a>
+                <div class="card-body">
+                    <a href="" class="h2 text-decoration-none text-dark">{{$cat->CATEGORIA_NOME}}</a>
+                        <p class="card-text">
+                            {{$cat->CATEGORIA_DESC}}
+                        </p>
+                        <button class="btn-primary"><a href="{{route('category.show', $cat->PRODUTO_ID) }}">Ver Mais</a></button>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+</section>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/templatemo.js"></script>
+@endsection
