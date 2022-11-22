@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\ImgProduct;
 
 class Product extends Model
 {
@@ -20,4 +21,7 @@ class Product extends Model
     protected $primaryKey = 'produto_id';
 
 
+    public function imagem(){
+        return $this->hasMany(ImgProduct::class, 'PRODUTO_ID', 'PRODUTO_ID');
+    }
 }

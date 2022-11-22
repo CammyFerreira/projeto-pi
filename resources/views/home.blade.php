@@ -119,7 +119,12 @@
                         <div class="col-12 col-md-4 mb-4">
                             <div class="card card-radius h-100">
                                 <a href="{{route('product.show', $product->PRODUTO_ID) }}">
-                                    <img src="/img/comic-con.png" height="300" class="card-img-top" alt="...">
+                                    @if (isset($product->imagem[0]))
+                                        <img src="{{$product->imagem[0]->IMAGEM_URL}}" height="300" class="card-img-top" alt="...">
+                                    @else
+                                        <img src="/img/comic-con.png" height="300" class="card-img-top" alt="...">
+                                    @endif
+
                                 </a>
                                 <div class="card-body">
                                     <a href="" class="h2 text-decoration-none text-dark">{{$product->PRODUTO_NOME}}</a>

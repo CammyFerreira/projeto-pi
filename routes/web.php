@@ -29,6 +29,7 @@ require __DIR__.'/auth.php';
 Route::get('/', [ProductsController::class, 'index'])->name('product.index');
 Route::get('/product/{product}', [ProductsController::class, 'show'])->name('product.show');
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart/{id}', [CartController::class, 'store'])->name('cart.store');
 Route::get('/pedidos', [PedidosController::class, 'index'])->name('cart.pedidos');
 //resto da rota acima: ->middleware(['auth']);
 

@@ -14,11 +14,19 @@ class CartController extends Controller
         return view('cart.index')->with('cart', Cart::where('USUARIO_ID', Auth::user()->USUARIO_ID)->get());
     }
 
-    public function store(Product $product)
+    public function store(Request $product, $id)
     {
-        Cart::create($product->all());
+
+
+        Cart::create([
+            "USUARIO_ID" => Auth::user()->USUARIO_ID,
+            "PRODUTO_ID" => $id,
+            "ITEM_QTD"   => $product->qtd
+        ]
+        );
+
         session()->flash('success', 'Produto foi adicionado no carrinho!');
-        return redirect(route('product.index')); 
+        return redirect()->back();
     }
 
     public function destroy($id)

@@ -14,7 +14,4 @@ class ImgProduct extends Model
     protected $table = 'PRODUTO_IMAGEM';
     protected $primaryKey = 'PRODUTO_ID';
 
-    public function imagem(){
-        return $this->belongsTo(Product::class, 'PRODUTO_ID', 'PRODUTO_ID');
-    }
 }
