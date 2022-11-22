@@ -4,7 +4,7 @@
     <div class="container py-5">
         <div class="row text-center py-3">
             <div class="col-lg-6 m-auto">
-                <h1 class="h1">Destaques</h1>
+                <h1 class="h1">Categorias</h1>
             </div>
         </div>
         <div class="row">
