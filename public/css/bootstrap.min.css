@@ -10542,3 +10542,8 @@ section {
     width: 20px;
 }
 
+.row1 {
+    display: flex;
+
+}
+
