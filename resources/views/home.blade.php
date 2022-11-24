@@ -5,24 +5,25 @@
         <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="container">
+                @if($produto = App\Models\Product::find(104))
+                    <a href="{{route('product.show', $produto->PRODUTO_ID)}}" class="text-dark text-decoration-none container">
                         <div class="row p-5">
                             <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                                <img class="img-fluid" src="/img/banner2.png" alt="">
+                                <img class="img-fluid" src="/img/primavera-sound.jpg" alt="">
                             </div>
                             <div class="col-lg-6 mb-0 d-flex align-items-center">
                                 <div class="text-align-left align-self-center">
-                                    <h1 class="h1">Guns n' Roses</h1>
-                                    <h3 class="h2">Venha viver esse momento</h3>
-                                    <p>
-                                        Uma das maiores bandas de rock está de volta ao Brasil.
-                                    </p>
+                                        <h1>{{$produto->PRODUTO_NOME}}</h1>
+                                        <p>{{$produto->PRODUTO_DESC}}</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                @endif
                 </div>
-                <div class="carousel-item">
+
+
+                <!--<div class="carousel-item">
                     <div class="container">
                         <div class="row p-5">
                             <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
@@ -30,17 +31,17 @@
                             </div>
                             <div class="col-lg-6 mb-0 d-flex align-items-center">
                                 <div class="text-align-left">
-                                    <h1 class="h1">Lollapalooza Brasil</h1>
-                                    <h3 class="h2">A experiência #LollaBR</h3>
-                                    <p>
-                                        Quatro palcos com o que tem de mais quente na música e muitas, mas muitas experiências pra você curtir. Esse é o Lollapalooza Brasil,
-                                        um festival que ocupa os 600mil m² do Autódromo de Interlagos em São Paulo com música, arte, gastronomia, moda e muito mais.
-                                    </p>
+                                @if($produto = App\Models\Product::find(87))
+                                        <h1>{{$produto->PRODUTO_NOME}}</h1>
+                                        <p>{{$produto->PRODUTO_DESC}}</p>
+                                    @endif
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
+
+
                 <div class="carousel-item">
                     <div class="container">
                         <div class="row p-5">
@@ -49,12 +50,10 @@
                             </div>
                             <div class="col-lg-6 mb-0 d-flex align-items-center">
                                 <div class="text-align-left">
-                                    <h1 class="h1">Rock in Rio</h1>
-                                    <h3 class="h2">Garanta o seu lugar </h3>
-                                    <p>
-                                        Durante sete dias, o Parque Olímpico da Barra transforma-se na Cidade do Rock, com mais de 250 shows, 670 artistas e 500 horas de entretenimento.
-                                        Além de grandes shows nos palcos, há apresentações de dança, games, experiências imersivas, ritmos e culturas do Brasil e do mundo!
-                                    </p>
+                                @if($produto = App\Models\Product::find(103))
+                                        <h1>{{$produto->PRODUTO_NOME}}</h1>
+                                        <p>{{$produto->PRODUTO_DESC}}</p>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -136,6 +135,8 @@
                             </div>
                     </div>
                     @endforeach
+
+                    {!! $products->links() !!}
             </div>
         </section>
 
