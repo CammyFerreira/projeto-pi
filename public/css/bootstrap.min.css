@@ -37,7 +37,8 @@
 *,
 ::after,
 ::before {
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin-block-end: inherit;
 }
 
 @media (prefers-reduced-motion:no-preference) {
@@ -10541,4 +10542,3 @@ section {
 .qtd {
     width: 20px;
 }
-
