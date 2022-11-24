@@ -24,17 +24,7 @@ class CategoriesController extends Controller
         return view('category.index')->with('category', $category);
     }
 
-    public function edit($id)
-    {
-        //
-    }
-
     public function update(Request $request, $id)
-    {
-        //
-    }
-
-    public function destroy($id)
     {
         //
     }

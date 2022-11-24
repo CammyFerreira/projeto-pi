@@ -1,10 +1,10 @@
 @extends('layout')
 @section('main')
 <script>
-        function remove(route){
+        function removeItem(route){
             if(confirm('Deseja remover o produto?'))
                 window.location = route;
-        }
+            }
     </script>
 <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="container">
@@ -20,12 +20,13 @@
         </div>
         @endif
         @foreach ($cart as $item)
+        @if($item->ITEM_QTD > 0)
         <div class="divider"></div>
-        <div class="row col s12 m12 l12">
-                <form method="POST" action="">
-
-                    <input type="hidden" name="pedido_id" value="">
-                    <table>
+        <div class="row col s12 m12 l12" id="">
+                <form method="POST" action="{{route('cart.update')}}">
+                    @csrf
+                    <input type="hidden" name="pedido_id" value="{{$item->PRODUTO_ID}}">
+                    <table id="">
                         <thead>
                             <tr>
                                 <th colspan="2"></th>
@@ -51,7 +52,7 @@
                                             <i class="material-icons small">add_circle_outline</i>
                                         </a>
                                     </div>
-                                    <a href="#" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Retirar produto do carrinho?">Retirar produto</a>
+                                    
                                 </td>
                                 <td>{{ $item->Produto->PRODUTO_NOME }}</td>
                                 <td>{{ $item->Produto->PRODUTO_PRECO }}</td>
@@ -60,11 +61,14 @@
                             </tr>
                         </tbody>
                         <tfoot>
-
+                        
                         </tfoot>
                     </table>
+                    <button class="tooltipped" data-position="right" data-delay="50" data-tooltip="Retirar produto do carrinho?" onclick="removeItem()" name="removeBtn" value="true">Retirar produto</button>
                 </form>
         </div>
+        @endif
+        
         @endforeach
         @if (count($cart) > 0)
         <tr>

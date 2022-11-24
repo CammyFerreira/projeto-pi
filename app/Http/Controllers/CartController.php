@@ -16,8 +16,6 @@ class CartController extends Controller
 
     public function store(Request $product, $id)
     {
-
-
         Cart::create([
             "USUARIO_ID" => Auth::user()->USUARIO_ID,
             "PRODUTO_ID" => $id,
@@ -29,10 +27,23 @@ class CartController extends Controller
         return redirect()->back();
     }
 
-    public function destroy($id)
+    public function update(Request $request)
     {
-        $product->delete();
-        session()->flash('success', 'Item foi removido do carrinho!');
-        return redirect(route('product.index'));
+        $carrinho = Auth::user()->USUARIO_ID;
+        $produtoCarrinho = Cart::where([['PRODUTO_ID','=', $request->pedido_id], ['USUARIO_ID', '=', $carrinho]])->first();
+
+        if($request->removeBtn){        
+            $produtoCarrinho->update([
+                "ITEM_QTD" => 0 
+            ]);
+            
+            session()->flash('success', 'Produto foi removido do carrinho!');
+
+            return view('cart.index')->with('cart', Cart::where('USUARIO_ID', Auth::user()->USUARIO_ID)->get());
+        }  
+        
+        if(empty($produtoCarrinho) || empty($carrinho)){
+            session()->flash('success', 'Produto foi não encontrado!');
+        }
     }
 }
