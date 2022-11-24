@@ -129,7 +129,9 @@
                                     <p class="card-text">
                                         {{$product->PRODUTO_DESC}}
                                     </p>
-                                    <button class="btn-primary"><a href="{{route('product.show', $product->PRODUTO_ID) }}">Ver Mais</a></button>
+                                    <a href="{{route('product.show', $product->PRODUTO_ID) }}">
+                                        <button class="btn-primary">Ver Mais</button>
+                                    </a>
                                 </div>
                             </div>
                     </div>
