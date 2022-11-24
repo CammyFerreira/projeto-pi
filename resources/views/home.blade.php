@@ -22,43 +22,42 @@
                 @endif
                 </div>
 
-
-                <!--<div class="carousel-item">
-                    <div class="container">
+                <div class="carousel-item">
+                @if($produto = App\Models\Product::find(87))
+                    <a href="{{route('product.show', $produto->PRODUTO_ID)}}" class="text-dark text-decoration-none container">
                         <div class="row p-5">
                             <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
                                 <img class="img-fluid" src="/img/banner2.png" alt="">
                             </div>
                             <div class="col-lg-6 mb-0 d-flex align-items-center">
-                                <div class="text-align-left">
-                                @if($produto = App\Models\Product::find(87))
+                                <div class="text-align-left align-self-center">
                                         <h1>{{$produto->PRODUTO_NOME}}</h1>
                                         <p>{{$produto->PRODUTO_DESC}}</p>
-                                    @endif
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>-->
-
+                    </a>
+                @endif
+                </div>
 
                 <div class="carousel-item">
-                    <div class="container">
+                @if($produto = App\Models\Product::find(103))
+                    <a href="{{route('product.show', $produto->PRODUTO_ID)}}" class="text-dark text-decoration-none container">
                         <div class="row p-5">
                             <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
                                 <img class="img-fluid" src="/img/banner3.png" alt="">
                             </div>
                             <div class="col-lg-6 mb-0 d-flex align-items-center">
-                                <div class="text-align-left">
-                                @if($produto = App\Models\Product::find(103))
+                                <div class="text-align-left align-self-center">
                                         <h1>{{$produto->PRODUTO_NOME}}</h1>
                                         <p>{{$produto->PRODUTO_DESC}}</p>
-                                    @endif
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                @endif
                 </div>
+                
             </div>
             <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
                 <i class="fas fa-chevron-left"></i>
