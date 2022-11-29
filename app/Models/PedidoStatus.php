@@ -9,7 +9,7 @@ class PedidoStatus extends Model
 {
     use HasFactory;
 
-    public $timestamp = false;
+    public $timestamps = false;
     protected $fillable = ['STATUS_ID', 'PEDIDO_DESC'];
     protected $table = 'PEDIDO_STATUS';
 }

@@ -10,7 +10,7 @@ class PedidoItem extends Model
 {
     use HasFactory;
 
-    public $timestamp = false;
+    public $timestamps = false;
     protected $fillable = ['PRODUTO_ID', 'PEDIDO_ID', 'ITEM_QTD', 'ITEM_PRECO'];
     protected $table = 'PEDIDO_ITEM';
 

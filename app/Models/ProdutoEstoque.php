@@ -9,7 +9,7 @@ class ProdutoEstoque extends Model
 {
     use HasFactory;
 
-    public $timestamp = false;
+    public $timestamps = false;
 
     protected $fillable = ['PRODUTO_ID',
                            'PRODUTO_QTD'];
