@@ -76,6 +76,18 @@ button {
     height: 30px;
 }
 
+#buttonCategory{
+    background-color: #126E82;
+    width: 200px;
+    height: 60px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}
+
+#mrCategory{
+    margin-bottom: 50px;
+}
 
 #btn-plus{
     width: 10px;
@@ -83,10 +95,8 @@ button {
 }
 
 #quantidade {
-
     width: 60px;
     margin-bottom: 10px;
-
   }
 
 .col-12 {

@@ -76,32 +76,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
     <div class="container">
-        <div class="row text-center mb-3">
-            <div class="col-md-12">
+        <div class="creations-header">
+            
+            <div class="row text-center mb-3">
+                <div class="col-md-12">
                 <h2>Categorias</h2>
-
-                <hr>
+                <hr id=mrCategory>
+                @foreach($categories as $cat)
+                    <button id="buttonCategory">{{ $cat->CATEGORIA_NOME }}</button>
+                @endforeach
+                </div>
             </div>
         </div>
-
-        <section class="container">
-
-
-            <div class="creations-header">
-            <link rel="stylesheet" href="/public/css/teste.css">
-                <h2>Outros Eventos</h2>
-                <button class="btn">Veja mais</button>
-            </div>
-            <ul class="creations">
-
-                <li style="background: url(/img/teatro.jpg) center top/cover no-repeat"></li>
-                <li style="background: url(/img/show.jpg) center top/cover no-repeat">Show</li>
-                <li style="background: url(/img/standup.jpg) center top/cover no-repeat">Standup</li>
-                <li style="background: url(/img/show.jpg) center top/cover no-repeat">Cinema</li>
-                <li style="background: url(/img/teatro.jpg) center top/cover no-repeat">Teatro</li>
-
-            </ul>
-        </section>
     </div>
 
 

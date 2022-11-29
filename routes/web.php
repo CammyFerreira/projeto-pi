@@ -6,8 +6,6 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\PedidosController;
 use App\Http\Controllers\CategoriesController;
 
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes

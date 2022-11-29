@@ -58,6 +58,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <button class="tooltipped" data-position="right" data-delay="50" data-tooltip="Retirar produto do carrinho?" onclick="removeItem()" name="removeBtn" value="true">Retirar produto</button>
                 </div>
                 @endif
                 @endforeach
