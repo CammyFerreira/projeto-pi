@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\ImgProduct;
+use App\Models\ProdutoEstoque;
 
 class Product extends Model
 {
@@ -23,5 +24,10 @@ class Product extends Model
 
     public function imagem(){
         return $this->hasMany(ImgProduct::class, 'PRODUTO_ID', 'PRODUTO_ID');
+    }
+
+    public function estoque()
+    {
+        return $this->belongsTo(ProdutoEstoque::class, 'PRODUTO_ID', 'PRODUTO_ID');
     }
 }

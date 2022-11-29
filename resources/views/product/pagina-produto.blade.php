@@ -6,8 +6,12 @@
         <div class="container pb-5">
             <div class="row">
                 <div class="col-lg-5 mt-5">
-                    <div class="card mb-3">
-                        <img class="rounded" src="/img/banner1.jpg" alt="Card image cap" id="product-detail">
+                    <div class="col-lg-12" id="ajusteP" href="{{route('product.show', $product->PRODUTO_ID) }}">
+                                    @if (isset($product->imagem[1]))
+                                        <img src="{{$product->imagem[1]->IMAGEM_URL}}" height="300" class="card-img-top" alt="...">
+                                    @else
+                                        <img src="/img/comic-con.png" height="300" class="card-img-top" alt="...">
+                                    @endif
                     </div>
                 </div>
 
@@ -41,7 +45,7 @@
                                     <div class="col-auto">
                                         <div class="col-auto">
 
-                                        Quantidade: <input type="number" id="quantidade" name="qtd">
+                                        Quantidade: <input type="number" id="quantidade" name="qtd" value="1" min="1" max="{{$product->estoque->PRODUTO_QTD}}">
 
                                     <div class="col-auto">
 
@@ -50,11 +54,6 @@
                                 <div class="row pb-3">
                                     <button type="submit">Comprar</button>
                                     <div class="col d-grid">
-                                    @if (Auth::user())
-                                        <a class="btn btn-lg" name="submit" id="btnBuy" href="{{route('cart.index')}}">Comprar</a>
-                                    @else
-                                        <a class="btn btn-lg" name="submit" id="btnBuy" href="{{route('login')}}">Comprar</a>
-                                    @endif
                                     </div>
                                 </div>
                             </form>
