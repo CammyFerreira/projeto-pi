@@ -25,8 +25,6 @@ class ProductsController extends Controller
             return view('home', ['products' => $products, 'search' => $search]);
         }
 
-        
-        //dd($request->search);
 
         $products = Product::orderBy('PRODUTO_ID', 'ASC')->paginate($this->qtdPorPagina);
 
