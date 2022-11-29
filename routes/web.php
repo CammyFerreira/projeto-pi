@@ -32,6 +32,7 @@ Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('/cart/{id}', [CartController::class, 'store'])->name('cart.store');
 Route::post('/cart', [CartController::class, 'update'])->name('cart.update');
 Route::get('/pedidos', [PedidosController::class, 'index'])->name('cart.pedidos');
+Route::post('/pedidos', [PedidosController::class, 'store'])->name('cart.pedidos');
 //resto da rota acima: ->middleware(['auth']);
 
 //public const HOME = '/dashboard'; --> Arquivo app\Providers\RouteServiceProvider.php

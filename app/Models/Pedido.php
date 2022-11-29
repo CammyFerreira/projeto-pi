@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\PedidoItem;
 use App\Models\PedidoStatus;
 
-class Ordered extends Model
+class Pedido extends Model
 {
     use HasFactory;
 
-    protected $timestamp = false;
+    public $timestamp = false;
     protected $fillable = ['PEDIDO_ID', 'USUARIO_ID', 'STATUS_ID', 'PEDIDO_DATA'];
     protected $table = 'PEDIDO';
 

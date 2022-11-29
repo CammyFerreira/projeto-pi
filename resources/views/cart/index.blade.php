@@ -21,7 +21,7 @@
             </div>
             </div>
             @endif
-        <form method="POST" action="">
+        <form method="POST" action="{{route('cart.pedidos')}}">
         @foreach ($cart as $item)
         @if($item->ITEM_QTD > 0)
         <div class="divider"></div>
@@ -65,9 +65,9 @@
 
                 <div>Total</div>
 
-                <a>
-                    <button>Fechar pedido</button>
-                </a>
+                
+                <button type="submit">Fechar pedido</button>
+               
                 </form>
                  @endif
         </div>
