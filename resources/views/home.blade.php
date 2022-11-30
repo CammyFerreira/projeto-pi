@@ -83,7 +83,7 @@
                 <h2>Categorias</h2>
                 <hr id=mrCategory>
                 @foreach($categories as $cat)
-                    <button id="buttonCategory">{{ $cat->CATEGORIA_NOME }}</button>
+                    <a href="{{ route('cart.pedidos') }}" id="buttonCategory">{{ $cat->CATEGORIA_NOME }}</a>
                 @endforeach
                 </div>
             </div>
