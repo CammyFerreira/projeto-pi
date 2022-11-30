@@ -13,8 +13,8 @@
                             </div>
                             <div class="col-lg-6 mb-0 d-flex align-items-center">
                                 <div class="text-align-left align-self-center">
-                                        <h1>{{$produto->PRODUTO_NOME}}</h1>
-                                        <p>{{$produto->PRODUTO_DESC}}</p>
+                                        <h1 style="padding-left: 50px !important;">{{$produto->PRODUTO_NOME}}</h1>
+                                        <p style="padding-left: 50px !important;">{{$produto->PRODUTO_DESC}}</p>
                                 </div>
                             </div>
                         </div>
@@ -31,8 +31,8 @@
                             </div>
                             <div class="col-lg-6 mb-0 d-flex align-items-center">
                                 <div class="text-align-left align-self-center">
-                                        <h1>{{$produto->PRODUTO_NOME}}</h1>
-                                        <p>{{$produto->PRODUTO_DESC}}</p>
+                                        <h1 style="padding-left: 50px !important;">{{$produto->PRODUTO_NOME}}</h1>
+                                        <p style="padding-left: 50px !important;">{{$produto->PRODUTO_DESC}}</p>
                                 </div>
                             </div>
                         </div>
@@ -49,8 +49,8 @@
                             </div>
                             <div class="col-lg-6 mb-0 d-flex align-items-center">
                                 <div class="text-align-left align-self-center">
-                                        <h1>{{$produto->PRODUTO_NOME}}</h1>
-                                        <p>{{$produto->PRODUTO_DESC}}</p>
+                                        <h1 style="padding-left: 50px !important;">{{$produto->PRODUTO_NOME}}</h1>
+                                        <p style="padding-left: 50px !important;">{{$produto->PRODUTO_DESC}}</p>
                                 </div>
                             </div>
                         </div>

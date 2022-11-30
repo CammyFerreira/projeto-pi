@@ -78,11 +78,12 @@ button {
 
 #buttonCategory{
     background-color: #126E82;
+    color: #ffffff;
+    padding: 2px;
     width: 200px;
     height: 60px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 #mrCategory{

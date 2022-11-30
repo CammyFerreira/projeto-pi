@@ -36,6 +36,7 @@
                         <thead>
                             <tr>
                                 <th colspan="2"></th>
+                                <th>Quantidade</th>
                                 <th>Produto</th>
                                 <th>Valor</th>
                                 <th>Desconto</th>
@@ -46,7 +47,10 @@
 
                             <tr>
                                 <td>
-                                    <img width="100" height="100" src="/img/banner2.jpg">
+                                    <img width="100" height="100" src="{{ $item->Produto->imagem[0]->IMAGEM_URL}} ">
+                                </td>
+                                <td class="center-align">
+                                <button class="tooltipped" data-position="right" data-delay="50" data-tooltip="Retirar produto do carrinho?" onclick="removeItem()" name="removeBtn" value="true">Retirar produto</button>
                                 </td>
                                 <td class="center-align">
                                     <div class="center-align">
@@ -70,7 +74,9 @@
                             </tr>
                         </tbody>
                     </table>
-                    <button class="tooltipped" data-position="right" data-delay="50" data-tooltip="Retirar produto do carrinho?" onclick="removeItem()" name="removeBtn" value="true">Retirar produto</button>
+                    <div>
+                    
+                    </div>
                 </div>
                 @endif
                 @endforeach
@@ -78,7 +84,7 @@
 
                 <div>Total do carrinho: {{$soma}}</div>
 
-
+                
                 <button type="submit">Fechar pedido</button>
 
                 </form>
