@@ -32,18 +32,19 @@ class CartController extends Controller
         $carrinho = Auth::user()->USUARIO_ID;
         $produtoCarrinho = Cart::where([['PRODUTO_ID','=', $request->pedido_id], ['USUARIO_ID', '=', $carrinho]])->first();
 
-        if($request->removeBtn){        
+        if($request->removeBtn){
             $produtoCarrinho->update([
-                "ITEM_QTD" => 0 
+                "ITEM_QTD" => 0
             ]);
-            
+
             session()->flash('success', 'Produto foi removido do carrinho!');
 
             return view('cart.index')->with('cart', Cart::where('USUARIO_ID', Auth::user()->USUARIO_ID)->get());
-        }  
-        
+        }
+
         if(empty($produtoCarrinho) || empty($carrinho)){
             session()->flash('success', 'Produto foi não encontrado!');
         }
     }
+
 }

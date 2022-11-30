@@ -9,7 +9,7 @@ class ImgProduct extends Model
 {
     use HasFactory;
 
-    protected $timestamp = false;
+    public $timestamps = false;
     protected $fillable = ['IMAGEM_ID', 'IMAGEM_ORDEM', 'PRODUTO_ID', 'IMAGEM_URL'];
     protected $table = 'PRODUTO_IMAGEM';
     protected $primaryKey = 'PRODUTO_ID';
