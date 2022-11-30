@@ -1,5 +1,8 @@
 @extends('layout')
 @section('main')
+@php
+    $soma = 0;
+@endphp
 <script>
         function removeItem(route){
             if(confirm('Deseja remover o produto?'))
@@ -47,14 +50,23 @@
                                 </td>
                                 <td class="center-align">
                                     <div class="center-align">
-                                        <input type="number" id="quantidade" name="qtd">
+                                        <input type="number" id="quantidade" name="qtd" value="1" min="1" value="{{$item->ITEM_QTD}}">
                                     </div>
-                                    
+
                                 </td>
                                 <td>{{ $item->Produto->PRODUTO_NOME }}</td>
                                 <td>{{ $item->Produto->PRODUTO_PRECO }}</td>
                                 <td>{{ $item->Produto->PRODUTO_DESCONTO }}</td>
-                                
+
+                                @php
+
+                                $totalItem = $item->ITEM_QTD * ($item->Produto->PRODUTO_PRECO - $item->Produto->PRODUTO_DESCONTO);
+                                $soma += $totalItem;
+
+                                @endphp
+
+                                <td>{{ $totalItem }} </td>
+
                             </tr>
                         </tbody>
                     </table>
@@ -63,18 +75,18 @@
                 @endforeach
                 @if (count($cart) > 0)
 
-                <div>Total</div>
+                <div>Total do carrinho: {{$soma}}</div>
 
-                
+
                 <button type="submit">Fechar pedido</button>
-               
+
                 </form>
                  @endif
         </div>
 
     </div>
 
-    @endsection
+@endsection
 </main>
 
 @yield('footer')
