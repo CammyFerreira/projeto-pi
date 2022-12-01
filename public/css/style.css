@@ -66,9 +66,28 @@ button {
 }
 
 .card-body {
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     justify-content: space-between;
+}
+
+
+#verMaisCat{
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #126E82;
+    height: auto;
+    font-weight: 160;
+}
+
+.cardName{
+    font-weight: bold;
+}
+
+#imagem-produto-categoria{
+    display: inline-block;
+    margin-left: 100px;
+
 }
 
 #btn-minus{
@@ -79,11 +98,13 @@ button {
 #buttonCategory{
     background-color: #126E82;
     color: #ffffff;
-    padding: 2px;
+    background-color: #126E82;
     width: 200px;
     height: 60px;
-    border-radius: 5px;
-    text-decoration: none;
+    font-size: 3px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
 }
 
 #mrCategory{

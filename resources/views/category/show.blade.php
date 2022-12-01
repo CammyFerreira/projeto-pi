@@ -9,28 +9,25 @@
             </div>
         </div>
         <div class="row">
-        <div class="col-12 col-md-4 mb-4">
+        <div id="produto-cat">
             @foreach($category->categorias as $product)
 
-            <div class="card card-radius h-100">
+            <div id="imagem-produto-categoria">
                 @if(isset($product->imagem[0]))
                 <a href="{{route('category.show', $category->CATEGORIA_ID) }}">
                     <img src="{{$product->imagem[0]}}" height="300" class="card-img-top" alt="...">
                 </a>
+                @elseif(!empty($product->imagem[0]))
+                    echo '<img src="../../public\img\imagem-indisponivel.jpg">'
                 @endif
-
-                <div class="card-body">
+                <div id="produto-categoria">
                     <a href="" class="h2 text-decoration-none text-dark"></a>
-                        <p class="card-text">
-                        {{$product->PRODUTO_NOME}}
-                        </p>
-                        <button class="btn-primary"><a href="{{route('product.show', $product->PRODUTO_ID)}}">Ver Mais</a></button>
+                        <p class="cardName">{{$product->PRODUTO_NOME}}</p>
+                        <a id="verMaisCat" class="btn" href="{{route('product.show', $product->PRODUTO_ID)}}">Ver Mais</a>
                 </div>
             </div>
             @endforeach
         </div>
-
-
     </div>
 </section>
 

@@ -83,7 +83,7 @@
                 <h2>Categorias</h2>
                 <hr id=mrCategory>
                 @foreach($categories as $cat)
-                    <a href="{{route('category.show', $cat->CATEGORIA_ID) }}" id="buttonCategory">{{ $cat->CATEGORIA_NOME }}</a>
+                    <a href="{{route('category.show', $cat->CATEGORIA_ID) }}" class="btn" id="buttonCategory">{{ $cat->CATEGORIA_NOME }}</a>
                 @endforeach
                 </div>
             </div>
